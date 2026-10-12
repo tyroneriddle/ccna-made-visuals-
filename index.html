@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCNA Made Visual — 12 Interactive Figures</title>
+<style>
+  :root { --paper:#faf8f2; --card:#ffffff; --ink:#2b2620; --muted:#7a7166; --accent:#b3541e; --line:#e6dfd2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; }
+  header { max-width:1100px; margin:0 auto; padding:48px 24px 8px; }
+  header h1 { font-size:2rem; margin:0 0 8px; letter-spacing:.5px; }
+  header p { color:var(--muted); max-width:640px; line-height:1.6; margin:0 0 4px; }
+  header .note { font-size:.85rem; }
+  .grid { max-width:1100px; margin:0 auto; padding:24px; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:transform .15s ease, box-shadow .15s ease; }
+  .card:hover { transform:translateY(-3px); box-shadow:0 10px 24px rgba(60,45,25,.12); }
+  .thumb { aspect-ratio:16/10; background:#f1ece1; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  .thumb .none { color:var(--muted); font-style:italic; font-size:.85rem; padding:16px; text-align:center; }
+  .body { padding:16px 18px 18px; }
+  .body h2 { font-size:1.05rem; margin:0 0 6px; }
+  .body h2 .fig { color:var(--accent); font-weight:normal; font-size:.85rem; margin-right:6px; }
+  .body p { margin:0; color:var(--muted); font-size:.9rem; line-height:1.55; }
+  footer { max-width:1100px; margin:0 auto; padding:8px 24px 48px; color:var(--muted); font-size:.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CCNA Made Visual — Interactive Figures</h1>
+  <p>Twelve technical concepts from the CCNA 200-301 plan, each explained as a working machine you can touch.
+  Built with the <a href="https://github.com/wheresryan22/anatomy" style="color:var(--accent)">Anatomy</a> skill:
+  every figure is a standalone page, every number on screen comes from the same model that moves the parts.</p>
+  <p class="note">Open any card below. All pages work offline, straight from disk.</p>
+</header>
+<div class="grid">
+
+  <a class="card" href="switch-mac-learning/switch-mac-learning.html">
+    <div class="thumb"><img src="switch-mac-learning/shot.png" alt="The mail room switch"></div>
+    <div class="body"><h2><span class="fig">Fig 1</span>Switch MAC Learning</h2>
+    <p>A mail sorting room: the clerk files each return address into a rolodex by door slot (the CAM table), forwards by lookup, and floods copies to every slot for unknown destinations — with aging timers.</p></div>
+  </a>
+
+  <a class="card" href="arp-mailroom/arp-mailroom.html">
+    <div class="thumb"><img src="arp-mailroom/shots/arp-final.png" alt="The ARP mailroom"></div>
+    <div class="body"><h2><span class="fig">Fig 2</span>ARP</h2>
+    <p>An office mailroom: the clerk shouts "who has 10.0.0.5?" to every desk, pins the answering name tag (MAC) to the desk, and entries age out on a visible timer.</p></div>
+  </a>
+
+  <a class="card" href="subnetting-surveyor/subnetting-surveyor.html">
+    <div class="thumb"><img src="subnetting-surveyor/preview.png" alt="The subnetting surveyor"></div>
+    <div class="body"><h2><span class="fig">Fig 3</span>Subnetting</h2>
+    <p>A land surveyor divides a plot of 192.168.1.0: slide the mask /24 → /28 and watch stakes and string lines split every parcel in two, with live network/broadcast/host readouts.</p></div>
+  </a>
+
+  <a class="card" href="vlans-warehouse/vlans-warehouse.html">
+    <div class="thumb"><img src="vlans-warehouse/shots/final-overview.png" alt="The VLAN warehouse"></div>
+    <div class="body"><h2><span class="fig">Fig 4</span>VLANs</h2>
+    <p>A warehouse split by partition walls into VLAN rooms: drag a crate and it stops dead at the walls. Lift the partitions to see the broadcast domain without VLANs.</p></div>
+  </a>
+
+  <a class="card" href="dot1q-trunking/dot1q-trunking.html">
+    <div class="thumb"><div class="none">interactive figure — open to run it</div></div>
+    <div class="body"><h2><span class="fig">Fig 5</span>802.1Q Trunking</h2>
+    <p>A conveyor belt between two switch-warehouses: a stamper slaps a colored VLAN tag on each crate crossing the trunk and a stripper removes it on arrival. Native VLAN rides untagged.</p></div>
+  </a>
+
+  <a class="card" href="routing-post-office/routing-post-office.html">
+    <div class="thumb"><img src="routing-post-office/preview.png" alt="The routing post office"></div>
+    <div class="body"><h2><span class="fig">Fig 6</span>Routing &amp; Longest-Prefix Match</h2>
+    <p>A post office sorting hub: the clerk masks the host octets, reads only the ZIP code, and drops each letter into the most specific of four nested bins — including the 0.0.0.0/0 default.</p></div>
+  </a>
+
+  <a class="card" href="static-vs-dynamic-routing/static-vs-dynamic-routing.html">
+    <div class="thumb"><div class="none">interactive figure — open to run it</div></div>
+    <div class="body"><h2><span class="fig">Fig 7</span>Static vs Dynamic Routing</h2>
+    <p>A paper map taped to the wall versus a live GPS unit. Close the highway and the GPS recalculates while the stale paper route gets an UNREACHABLE stamp.</p></div>
+  </a>
+
+  <a class="card" href="nat-pat-mailroom/nat-pat-mailroom.html">
+    <div class="thumb"><img src="nat-pat-mailroom/shots/rest.png" alt="The NAT/PAT mailroom"></div>
+    <div class="body"><h2><span class="fig">Fig 8</span>NAT / PAT</h2>
+    <p>A corporate mailroom with one public PO box: the clerk keeps a live translation ledger mapping inside extensions to box + apartment number (port), routing replies back to the right desk.</p></div>
+  </a>
+
+  <a class="card" href="dhcp-dora/dhcp-dora.html">
+    <div class="thumb"><img src="dhcp-dora/shots/rest.png" alt="The DHCP rental counter"></div>
+    <div class="body"><h2><span class="fig">Fig 9</span>DHCP DORA</h2>
+    <p>A rental car counter: Discover → Offer → Request → Ack acted out across the counter, keys handed over with a ticking lease timer, and renewal on demand.</p></div>
+  </a>
+
+  <a class="card" href="tcp-handshake/tcp-handshake.html">
+    <div class="thumb"><div class="none">interactive figure — open to run it</div></div>
+    <div class="body"><h2><span class="fig">Fig 10</span>TCP Three-Way Handshake</h2>
+    <p>A three-knock door exchange: SYN, SYN-ACK, ACK slips with sequence numbers, the door swings open, data notes flow with advancing seq/ack, and FIN closes it.</p></div>
+  </a>
+
+  <a class="card" href="acls-bouncer/acls-bouncer.html">
+    <div class="thumb"><div class="none">interactive figure — open to run it</div></div>
+    <div class="body"><h2><span class="fig">Fig 11</span>Access Control Lists</h2>
+    <p>A nightclub bouncer with a clipboard: patrons queue with packet badges, the finger slides down the ordered rules, first match wins — PERMIT or DENY — with per-rule hit counters and an implicit deny.</p></div>
+  </a>
+
+  <a class="card" href="stp-traffic-cop/stp-traffic-cop.html">
+    <div class="thumb"><img src="stp-traffic-cop/shots/final.png" alt="The STP traffic cop"></div>
+    <div class="body"><h2><span class="fig">Fig 12</span>Spanning Tree Protocol</h2>
+    <p>A traffic cop at two redundant bridges: one blocked by a STOP sign. Fail the open bridge and the cop waves traffic through listening → learning → forwarding onto the backup.</p></div>
+  </a>
+
+</div>
+<footer>Built 2026-10-11/12 with the Anatomy skill (MIT). Each figure ships its own build.mjs; geometry audited with kit/audit.mjs. Nothing here phones home.</footer>
+</body>
+</html>
